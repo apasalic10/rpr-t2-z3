@@ -39,20 +39,20 @@ public class App {
         double min = min(lista);
         double max = max(lista);
 
-        /**Kod koji računa srednju vrijednost elemenata liste*/
+
         double suma = 0;
         for(Double x : lista){
                 suma += x;
         }
-        double average = (double)suma/lista.size();
+        double average = suma/lista.size() - 1;
 
-        /**Kod koji računa varijansu elemenata liste*/
+
         double varijansa = 0;
-        for(int i = 0; i < lista.size(); i++){
-                varijansa += Math.pow(lista.get(i) - average,2);
+        for (Double a: lista) {
+            varijansa += Math.pow(a - average, 2);
         }
 
-        /**Kod koji računa standardnu devijaciju elemnata liste*/
+
         double sd = Math.sqrt(varijansa/ lista.size());
 
         System.out.println("Najmanji element u listi je: " + min);
