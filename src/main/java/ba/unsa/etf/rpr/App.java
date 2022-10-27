@@ -44,7 +44,7 @@ public class App {
         for(Double x : lista){
                 suma += x;
         }
-        double average = suma/lista.size() - 1;
+        double average = suma/lista.size();
 
 
         double varijansa = 0;
@@ -53,7 +53,7 @@ public class App {
         }
 
 
-        double sd = Math.sqrt(varijansa/ lista.size());
+        double sd = Math.sqrt(varijansa/ lista.size() - 1);
 
         System.out.println("Najmanji element u listi je: " + min);
         System.out.println("Najveci element u listi je: " + max);
